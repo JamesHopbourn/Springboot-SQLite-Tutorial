@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:sqlite:tutorial03.db
+    data: classpath:data.sql
+    initialization-mode: always
+    driver-class-name: org.sqlite.JDBC
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.sqlite.hibernate.dialect.SQLiteDialect
+        format_sql: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
